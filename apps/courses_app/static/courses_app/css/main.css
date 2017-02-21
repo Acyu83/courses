@@ -1,0 +1,42 @@
+th {
+  width: 280px;
+  text-align: left;
+  border-left: 1px black solid;
+  border-bottom: 1px black solid;
+}
+
+td {
+  width: 280px;
+  text-align: left;
+  border-left: 1px black solid;
+  /*padding: 0px;
+  margin: 0px;*/
+}
+.wrap {
+  width: 500px;
+}
+
+
+table {
+  margin-top: 50px;
+  border: 1px black solid;
+  border-spacing: 0px;
+}
+input {
+  display: block;
+}
+
+.add {
+  background-color: green;
+  color: white;
+}
+
+.confirm {
+  background-color: red;
+  color: white;
+  display: inline;
+}
+
+.no {
+  display: inline;
+}

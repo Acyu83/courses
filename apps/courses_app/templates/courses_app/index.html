@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Courses</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/CSS" href="{% static "courses_app/css/main.css" %}">
+  </head>
+  <body>
+    <div class="wrap">
+    <form action="/process" method="post">
+      {% csrf_token %}
+      <label for="name">Name:</label>
+      <div>
+      <input type="text" name="name">
+      </div>
+      <label for="description">Description</label>
+      <div>
+      <textarea name="description"></textarea>
+    </div>
+      <input type="submit" value="Add" class="add">
+    </form>
+    </div>
+    <table>
+      <tr>
+        <th>Course Name</th>
+        <th>Description</th>
+        <th>Date Added</th>
+        <th>Actions</th>
+      </tr>
+      {% for course in courses %}
+      <tr>
+        <td>{{course.name}}</td>
+        <td>{{course.description_id.description}}</td>
+        <td>{{course.created_at}}</td>
+        <td><a href="/confirm_process/{{course.id}}">remove</a></td>
+      </tr>
+      {% endfor %}
+</table
+  </body>
+</html>
